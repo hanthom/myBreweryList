@@ -1,0 +1,5 @@
+myBreweryList.service('mainService', function() {
+
+
+	
+})
