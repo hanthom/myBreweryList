@@ -1,0 +1,5 @@
+myBreweryList.controller('loginService', function() {
+
+
+	
+})
