@@ -24,8 +24,8 @@
 			<input type="text" ng-model="search" placeholder="Brewery Name"/>
 		</form>
 
-		<ul ng-repeat="brewery in result">
-			<li>{{brewery.name}} -- {{brewery.established}}</li>
+		<ul ng-repeat="brewery in breweries">
+			<li><a ui-sref="brewery({brewery: brewery.id})">{{brewery.name}}</a></li>
 		</ul>
 
 		<div ui-view></div>
