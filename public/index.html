@@ -6,8 +6,8 @@
 </head>
 <body ng-app="myBreweryList">
 
-	<div ng-controller="mainCtrl.js">
-		
+	<div ng-controller="mainCtrl">
+		<h1>{{test}}</h1>
 		<header>
 			<div class="header">
 				<h1>Brewery Lister</h1>
@@ -20,7 +20,8 @@
 		</header>
 
 		<form ng-submit="getBreweries(search)">
-			<input type="text" ng-model="search"/>
+			Search for a brewery: 
+			<input type="text" ng-model="search" placeholder="Brewery Name"/>
 		</form>
 
 		<div ui-view></div>
@@ -29,7 +30,7 @@
 
 
 
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.1/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.1/angular.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
 	<script src="app.js"></script>
 	<script src="mainCtrl.js"></script>
