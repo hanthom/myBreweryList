@@ -19,10 +19,14 @@
 
 		</header>
 
-		<form ng-submit="getBreweries(search)">
+		<form ng-submit="searchBreweries(search)">
 			Search for a brewery: 
 			<input type="text" ng-model="search" placeholder="Brewery Name"/>
 		</form>
+
+		<ul ng-repeat="brewery in result">
+			<li>{{brewery.name}} -- {{brewery.established}}</li>
+		</ul>
 
 		<div ui-view></div>
 
@@ -39,5 +43,7 @@
 	<script src="login/loginService.js"></script>
 	<script src="home/homeCtrl.js"></script>
 	<script src="home/homeService.js"></script>
+	<script src="brewery/breweryService.js"></script>
+	<script src="brewery/breweryCtrl.js"></script>
 </body>
 </html>

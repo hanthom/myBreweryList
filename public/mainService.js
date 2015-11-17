@@ -1,14 +1,26 @@
 myBreweryList.service('mainService', function($http) {
-      this.getBreweries = function() {
-      	return $http({
-      		url: '/api/brew',
-      		method: 'GET',
-      	});
-        // return $http({
-        //   method: 'JSON',
-        //   url: "http://api.brewerydb.com/v2/?key=b124abbace7776c29aa83a02dc882e92&type=brewery&q=community",
-        // });
-      }
+      
+	this.getBrews = function(query) {
+		var query = query ? '?q=' + query : '';
+		return $http({
+			method: 'GET',
+			url: '/api/brewsearch' + query,
+		});
+	}
+
+	// var getBrew = function(id) {
+	// 	return $http({
+	// 		method: 'GET',
+	// 		url: '/api/brew?id=' + id
+	// 	});
+	// };
+
+	// getBrew('cPRfoj').then(function(res) {
+	// 	console.log(res);
+	// }, function(err) {
+	// 	console.log(err);
+	// });
+
     });
 
 
