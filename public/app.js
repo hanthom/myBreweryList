@@ -1,4 +1,4 @@
-var myBreweryList = angular.module('myBreweryList',['ui.router']);
+var myBreweryList = angular.module('myBreweryList',['ui.router', 'firebase']);
 
 myBreweryList.config(function ($stateProvider, $urlRouterProvider) {
 
@@ -19,11 +19,26 @@ myBreweryList.config(function ($stateProvider, $urlRouterProvider) {
 			url: '/brewery/:id',
 			controller: 'breweryCtrl',
 			templateUrl: 'brewery/breweryTmpl.html',
-			// resolve: {
-			// 	breweryData: function(mainService, $stateParams) {
-			// 		return mainService.getBrew($stateParams.id)
-			// 	}
-			// }
+			resolve: {
+				breweryData: function(mainService, $stateParams) {
+					return mainService.getBrew($stateParams.id)
+				}
+			}
+		})
+		.state('login', {
+			url: '/login',
+			controller: 'loginCtrl',
+			templateUrl: 'login/loginTmpl.html'
+		})
+		.state('register', {
+			url: '/register',
+			controller: 'registerCtrl',
+			templateUrl: 'login/registerTmpl.html',
+		})
+		.state('profile', {
+			url: '/profile',
+			controller: 'profileCtrl',
+			templateUrl: 'profile/profileTmpl.html',
 		});
 
 

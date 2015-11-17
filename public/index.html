@@ -13,20 +13,13 @@
 				<h1>Brewery Lister</h1>
 			</div>
 			<div class="header">
-				<div ng-click="login">Login</div>
+				<div><a ui-sref="login">Login</a> </div>
 			</div>
-
+			<button ui-sref="search">Search</button>
 
 		</header>
 
-		<form ng-submit="searchBreweries(search)">
-			Search for a brewery: 
-			<input type="text" ng-model="search" placeholder="Brewery Name"/>
-		</form>
-
-		<ul ng-repeat="brewery in breweries">
-			<li><a ui-sref="brewery({brewery: brewery.id})">{{brewery.name}}</a></li>
-		</ul>
+		
 
 		<div ui-view></div>
 
@@ -36,14 +29,20 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.1/angular.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+	<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
+	
 	<script src="app.js"></script>
 	<script src="mainCtrl.js"></script>
 	<script src="mainService.js"></script>
 	<script src="login/loginCtrl.js"></script>
-	<script src="login/loginService.js"></script>
 	<script src="home/homeCtrl.js"></script>
 	<script src="home/homeService.js"></script>
 	<script src="brewery/breweryService.js"></script>
 	<script src="brewery/breweryCtrl.js"></script>
+	<script src="search/searchCtrl.js"></script>
+	<script src="login/registerCtrl.js"></script>
+	<script src="login/userService.js"></script>
+	<script src="profile/profileCtrl.js"></script>
 </body>
 </html>

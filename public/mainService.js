@@ -1,4 +1,4 @@
-myBreweryList.service('mainService', function($http) {
+myBreweryList.service('mainService', function($http, $q) {
       
 	this.getBrews = function(query) {
 		var query = query ? '?q=' + query : '';
@@ -9,10 +9,16 @@ myBreweryList.service('mainService', function($http) {
 	}
 
 	this.getBrew = function(id) {
-		return $http({
+		var deferred = $q.defer();
+		console.log(id);
+		$http({
 			method: 'GET',
 			url: '/api/brew?id=' + id
-		});
+		}).then(function(res) {
+			console.log(res);
+			deferred.resolve(res.data.data);
+		})
+		return deferred.promise;
 	};
 
     });
