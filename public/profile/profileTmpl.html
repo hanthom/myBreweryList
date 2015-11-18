@@ -2,7 +2,9 @@
 
 <div>
 	<h3>Saved Breweries</h3>
-	<ul ng-repeat="">
-		<li></li>
+	<ul ng-repeat="brewRef in userProfile.favorites">
+		<li>
+			<a ui-sref="brewery({id: brewRef.id})">{{brewRef.name}}</a>
+		</li>
 	</ul>
 </div>

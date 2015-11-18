@@ -1,12 +1,11 @@
-myBreweryList.controller('profileCtrl', function($scope, profileService, $firebaseArray) {
+myBreweryList.controller('profileCtrl', function($scope, profileService, $firebaseObject) {
 
-	$scope.profileList = $firebaseArray(profileRef);
-
-	$scope.saveToProfileList = function(name, id) {
-		$scope.profileList.$add({
-			name: name,
-			id: id,
-		})
+	if ($scope.user) {
+		var profileRef = new Firebase("https://mybrewerylist.firebaseio.com/users/" + $scope.user.id);
+		$scope.userProfile = $firebaseObject(profileRef);
 	}
+	// else {
+	// 	$scope.profileList;
+	// }
 
 })

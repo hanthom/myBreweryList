@@ -1,7 +1,5 @@
 myBreweryList.controller('searchCtrl', function($scope, mainService) {
 
-	$scope.test = "Hi world";
-
 	$scope.searchBreweries = function(search) {
 		mainService.getBrews(search).then(function(results) {
 			$scope.breweries = results.data.data;
