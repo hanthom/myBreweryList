@@ -1,5 +1,7 @@
 var myBreweryList = angular.module('myBreweryList',['ui.router', 'firebase']);
 
+myBreweryList.constant("fb", {url: "https://mybrewerylist.firebaseio.com/"})
+
 myBreweryList.config(function ($stateProvider, $urlRouterProvider) {
 
 	$urlRouterProvider.otherwise('/');

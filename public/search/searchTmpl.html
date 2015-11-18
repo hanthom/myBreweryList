@@ -5,5 +5,8 @@
 </form>
 
 <ul ng-repeat="brewery in breweries">
-	<li><a ui-sref="brewery({id: brewery.id})">{{brewery.name}}</a></li>
+	<li>
+		<a ui-sref="brewery({id: brewery.id})">{{brewery.name}}</a>
+		
+	</li>
 </ul>
