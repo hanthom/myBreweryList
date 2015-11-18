@@ -28,6 +28,8 @@ myBreweryList.service('userService', function($firebaseAuth, $state, $firebaseOb
 	}
 	
 	this.logout = function(user) {
+		console.log(user);
+		$state.go('/home');
 		return auth.$unauth();
 	}
 })

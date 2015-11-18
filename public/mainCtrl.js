@@ -20,6 +20,8 @@ myBreweryList.controller('mainCtrl', function($scope, mainService, userService, 
 		// }
 	})
 
-	
+	$scope.logout = function(user) {
+		userService.logout();
+	}
 
 })
