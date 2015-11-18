@@ -3,6 +3,7 @@ myBreweryList.controller('breweryCtrl', function($scope, mainService, $statePara
 	$scope.brewery = breweryData;
 
 	if ($scope.user) {
+		console.log($scope.user);
 		var favRef = new Firebase("https://mybrewerylist.firebaseio.com/users/" + $scope.user.id + "/favorites");
 		$scope.favList = $firebaseArray(favRef);
 	}

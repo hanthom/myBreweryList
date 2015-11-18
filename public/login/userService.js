@@ -3,8 +3,6 @@ myBreweryList.service('userService', function($firebaseAuth, $state, $firebaseOb
 	var authRef = new Firebase("https://mybrewerylist.firebaseio.com/");
 	var auth = $firebaseAuth(authRef);
 
-	var isNewUser = true;
-
 	this.getAuth = function() {
 		return auth.$getAuth();
 	}
@@ -15,6 +13,7 @@ myBreweryList.service('userService', function($firebaseAuth, $state, $firebaseOb
 			var userRef = new Firebase("https://mybrewerylist.firebaseio.com/users/" + id);
 			var userObj = $firebaseObject(userRef);
 			userObj.email = newUser.email;
+			userObj.id = id;
 			console.log(userObj);
 			return userObj.$save();
 		});
@@ -28,8 +27,7 @@ myBreweryList.service('userService', function($firebaseAuth, $state, $firebaseOb
 		return auth;
 	}
 	
-
-	// this.logout = function(user) {
-	// 	return auth.$unauth();
-	// }
+	this.logout = function(user) {
+		return auth.$unauth();
+	}
 })

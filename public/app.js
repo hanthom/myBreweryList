@@ -41,11 +41,6 @@ myBreweryList.config(function ($stateProvider, $urlRouterProvider) {
 			url: '/profile',
 			controller: 'profileCtrl',
 			templateUrl: 'profile/profileTmpl.html',
-			resolve: {
-				profileRef: function(profileService, $stateParams) {
-					return profileService.getProfileList();
-				}
-			}
 		});
 
 
