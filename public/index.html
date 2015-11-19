@@ -14,11 +14,11 @@
 				<h1>Brewery Buddy</h1>
 			</div>
 			<div class="header">
-				<div><a ui-sref="login">Login</a> </div>
+				<div ng-show="loggedIn" class="ng-hide"><a ui-sref="login">Login</a> </div>
 			</div>
-			<button ng-click="logout()">Logout</button>
+			<!-- <button ng-click="logout()">Logout</button> -->
 			<button ui-sref="search">Search</button>
-			<a ui-sref="profile">Profile</a>
+			<button ui-sref="profile">Profile</button>
 
 		</header>
 
