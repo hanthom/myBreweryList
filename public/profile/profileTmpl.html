@@ -1,10 +1,12 @@
-<h1>My Profile</h1>
+<div id="about">
+	<h1>My Profile</h1>
 
-<div>
-	<h3>List of Favorite Breweries</h3>
-	<ul ng-repeat="brewRef in favorites">
-		<li>
-			<a ui-sref="brewery({id: brewRef.id})">{{brewRef.name}}</a>
-		</li>
-	</ul>
+	<div>
+		<h3>List of Favorite Breweries</h3>
+		<ul ng-repeat="brewRef in favorites">
+			<li>
+				<a ui-sref="brewery({id: brewRef.id})" class="links">{{brewRef.name}}</a>
+			</li>
+		</ul>
+	</div>
 </div>
