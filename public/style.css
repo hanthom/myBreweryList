@@ -1,4 +1,13 @@
+body {
+	background: url('http://1.bp.blogspot.com/-b2k-bQqusf4/VMKYO9ZLG2I/AAAAAAAAB3Q/M1oeEUK00sk/s1600/12168242.jpg');
+	background-size: cover;
+}
+
 .header {
 	display: inline-block;
 	
+}
+
+.jumbotron {
+	background-color: rgba(0, 0, 0, 0.5);
 }
