@@ -10,9 +10,9 @@ app.use(cors());
 
 app.use(express.static(__dirname + '/public'));
 
-app.listen(port, function() {
-  console.log('listening on port: ', port);
-});
+//app.listen(port, function() {
+//  console.log('listening on port: ', port);
+//});
 
 
 app.get('/api/brewsearch', function(req, res) {
