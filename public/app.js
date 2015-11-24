@@ -41,6 +41,12 @@ myBreweryList.config(function ($stateProvider, $urlRouterProvider) {
 			url: '/profile',
 			controller: 'profileCtrl',
 			templateUrl: 'profile/profileTmpl.html',
+		})
+		.state('logout', {
+			url:'/logout',
+			controller: function(userService) {
+				return userService.logout();
+			}
 		});
 
 
