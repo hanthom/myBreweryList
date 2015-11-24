@@ -1,7 +1,8 @@
 myBreweryList.controller('mainCtrl', function($scope, mainService, userService, $firebaseObject) {
 
 	var auth = userService.getAuthObj();
-	$scope.loggedIn = true;
+	$scope.logIn = true;
+	$scope.loggedOut = false;
 
 	auth.$onAuth(function(userAuth) {
 		if (userAuth) {

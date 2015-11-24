@@ -13,9 +13,9 @@
 				<h1>Brewery Buddy</h1>
 			</div>
 			<div class="header">
-				<div><button ui-sref="login">Login</button> </div>
+				<div><button ui-sref="login" ng-show="logIn">Login</button> </div>
 			</div>
-			<a ui-sref="logout">Logout</a>
+			<a ui-sref="logout" ng-show="loggedOut">Logout</a>
 			<button ui-sref="search">Search</button>
 			<button ui-sref="profile">Profile</button>
 
