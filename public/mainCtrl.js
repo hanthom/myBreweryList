@@ -13,6 +13,8 @@ myBreweryList.controller('mainCtrl', function($scope, mainService, userService, 
 		}
 		else {
 			$scope.user = userAuth;
+			$scope.logIn = true;
+			$scope.loggedOut = false;
 		}
 	})
 
