@@ -26,7 +26,7 @@ myBreweryList.service('userService', function($firebaseAuth, $state, $firebaseOb
 	this.getAuthObj = function() {
 		return auth;
 	}
-	
+
 	// This part was just added for logging out.
 
 	this.logout = function(user) {
@@ -35,7 +35,7 @@ myBreweryList.service('userService', function($firebaseAuth, $state, $firebaseOb
 
 	auth.$onAuth(function(authData) {
 		if (!authData) {
-			$state.go('login');
+			$state.go('home');
 		}
 	})
 })
