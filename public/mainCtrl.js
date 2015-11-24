@@ -8,7 +8,8 @@ myBreweryList.controller('mainCtrl', function($scope, mainService, userService, 
 		if (userAuth) {
 			var userRef = new Firebase("https://mybrewerylist.firebaseio.com/users/" + userAuth.uid);
 			$scope.user = $firebaseObject(userRef);
-			
+			$scope.logIn = false;
+			$scope.loggedOut = true;
 		}
 		else {
 			$scope.user = userAuth;
